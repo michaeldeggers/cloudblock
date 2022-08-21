@@ -13,10 +13,6 @@ variable "aws_az" {
   default = 0
 }
 
-variable "aws_profile" {
-  type = string
-}
-
 variable "vpc_cidr" {
   type = string
 }
@@ -91,11 +87,18 @@ terraform {
       source = "hashicorp/aws"
     }
   }
+
+  cloud {
+    organization = "eggs-projects"
+
+    workspaces {
+      name = "primary"
+    }
+  }
 }
 
 provider "aws" {
   region  = var.aws_region
-  profile = var.aws_profile
 }
 
 # region azs

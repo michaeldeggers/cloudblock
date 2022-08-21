@@ -1,12 +1,12 @@
 ## COMMON ##
-pihole_password = "need-coffee"
-instance_key    = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDJ1QpcsGSN890egYS7vk5rvmPICGQEtOIP8HfGU0LsWZdD/HcBA+tsmHOua3EPBji6U10BExSxELIklErj8g7p/4Z3WfnTWuCKnsUmPzm0vytn+6ITxWLbte/ZFHvKVWgqaN31RTAdxzw5vyGRnEDGfDlbZfgJuf5Upq3XFFCpgqhkLRdG+91hbhHQqGdpOXFZKTlBs0doTSEVeIDtPDWDDEPf15it/nXWgQqE1+xp04aLMG1KPRgMKkQ+RJ4vcYju6OGhtq6lyVpjfdagn6bgRwu3veWUUztMVDS8ObWXDfCUY2LLCJmI3Ol5i+N2qD4RwYNEWhxI+gdmKQvDM157PhxTqK5t5YEtfzngirVaXeiANUhzIxB7C4GuPUQogpP96OUVGQE0nR8XTfbE+NtzIOXouiqnAza1KIMIRqJIydFcYaAaCGWn74ItydfAzAfVvMC/NpBQVsMkxOx+RG5d1xllAj36JAAAHpPY4Wj99Pv6pJ2mBpkYFId6RQsUHFk= michael@Michaels-MacBook-Pro.local"
+# pihole_password = "password"
+#instance_key    = "public_key"
 
 # ip range permitted access to instance SSH and pihole webUI. Also granted DNS access if dns_novpn = 1.
 # Deploying for home use? This should be your public IP address/32.
-mgmt_cidr = "69.221.136.171/32"
+# mgmt_cidr = "cidr"
 
-kms_manager = "eggs-cli"
+# kms_manager = "user"
 
 # The number of wireguard peer configurations to generate / store - 1 per device
 wireguard_peers = 20
