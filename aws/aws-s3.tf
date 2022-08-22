@@ -46,10 +46,10 @@ resource "aws_s3_bucket_public_access_block" "ph-bucket-pubaccessblock" {
 
 # s3 objects (playbook)
 resource "aws_s3_object" "ph-files" {
-  for_each       = fileset("../playbooks/", "*")
+  for_each       = fileset("./playbooks/", "*")
   bucket         = aws_s3_bucket.ph-bucket.id
   key            = "playbook/${each.value}"
-  content_base64 = base64encode(file("${path.module}/../playbooks/${each.value}"))
+  content_base64 = base64encode(file("${path.module}/playbooks/${each.value}"))
   kms_key_id     = aws_kms_key.ph-kmscmk-s3.arn
 }
 
