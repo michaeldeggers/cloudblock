@@ -92,7 +92,7 @@ terraform {
     organization = "eggs-projects"
 
     workspaces {
-      name = "primary"
+      name = "cloudblock"
     }
   }
 }
